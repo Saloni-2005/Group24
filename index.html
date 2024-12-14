@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>HRS Hotels</title>
+    <title>LV</title>
     
   </head>
   <body>
@@ -17,8 +17,8 @@
       <div class="nav__bar">
         <div class="nav__header">
           <div class="logo nav__logo">
-            <div>H</div>
-            <span>HOTEL<br />HRS</span>
+            <div>LV</div>
+            <span>Resort<br />Luna Vista</span>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
             <i class="ri-menu-line"></i>
@@ -47,11 +47,11 @@
         <form action="/">
           <div class="input__group">
             <label for="arrival">Arrival Date</label>
-            <input type="text" placeholder="Your Arrival Date" />
+            <input type="date" id="arrivalDate" placeholder="Your Arrival Date" />
           </div>
           <div class="input__group">
             <label for="departure">Departure Date</label>
-            <input type="text" placeholder="Your Departure Date" />
+            <input type="date" id="departureDate" placeholder="Your Departure Date" />
           </div>
           <div class="input__group">
             <label for="guests">Guests</label>
@@ -116,45 +116,6 @@
       </div>
     </section>
 
-    <section class="room__container" id="room">
-      <p class="section__subheader">ROOMS</p>
-      <h2 class="section__header">Hand Picked Rooms</h2>
-      <div class="room__grid">
-        <div class="room__card">
-          <img src="assets/room-1.jpg" alt="room" />
-          <div class="room__card__details">
-            <div>
-              <h4>Deluxe Suite</h4>
-              <p>Well-appointed rooms designed for guests who desire a more.</p>
-            </div>
-            <h3>5K<span>/night</span></h3>
-          </div>
-        </div>
-        <div class="room__card">
-          <img src="assets/room-2.jpg" alt="room" />
-          <div class="room__card__details">
-            <div>
-              <h4>Family Suite</h4>
-              <p>Consist of multiple rooms and a common living area.</p>
-            </div>
-            <h3>10K<span>/night</span></h3>
-          </div>
-        </div>
-        <div class="room__card">
-          <img src="assets/room-3.jpg" alt="room" />
-          <div class="room__card__details">
-            <div>
-              <h4>Luxury Penthouse</h4>
-              <p>
-                Top-tier accommodations usually on the highest floors of a
-                hotel.
-              </p>
-            </div>
-            <h3>20K<span>/night</span></h3>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="section__container feature__container" id="feature">
       <p class="section__subheader">FACILITIES</p>
@@ -242,10 +203,10 @@
           <h4>Services</h4>
           <div class="footer__links">
             <li><a href="#">Online Booking</a></li>
-            <li><a href="#">Room Customization</a></li>
+            <li><a href="#">Gym & Yoga space</a></li>
             <li><a href="#">Cab Service</a></li>
-            <li><a href="#">Special Offers</a></li>
-            <li><a href="#">Wifi 24x7</a></li>
+            <li><a href="#">Parking Area</a></li>
+            <li><a href="#">Wifi  24x7</a></li>
             <li><a href="#">Customer Support</a></li>
           </div>
         </div>
@@ -277,11 +238,10 @@
         </div>
       </div>
       <div class="footer__bar">
-        HRS Hotel, Serenity Avenue, Blue Ridge District, Crescent City, 56789 Dreamland
+        LV Resort, Serenity Avenue, Blue Ridge District, Crescent City, 56789 Dreamland
       </div>
     </footer>
 
-    <!-- Room Modal -->
 <div id="modalOverlay" onclick="closeModal()"></div>
 
 <div id="roomModal" class="modal">
@@ -295,7 +255,6 @@
   </div>
 </div>
 
-<!-- Button to open modal -->
 <button onclick="openModal()">Check Availability</button>
 
 

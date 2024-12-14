@@ -49,6 +49,34 @@ function openModal() {
   const modal = document.getElementById('roomModal');
   const overlay = document.getElementById('modalOverlay');
   const roomList = document.getElementById('roomList');
+  const arrivalDate = document.getElementById('arrivalDate').value;
+  const departureDate = document.getElementById('departureDate').value;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); 
+
+  if (!arrivalDate || !departureDate) {
+    alert('Please enter both arrival and departure dates.');
+    return;
+  }
+
+  const arrival = new Date(arrivalDate);
+  const departure = new Date(departureDate);
+
+  if (arrival < today) {
+    alert('Arrival date cannot be in the past.');
+    return;
+  }
+
+  if (departure < today) {
+    alert('Departure date cannot be in the past.');
+    return;
+  }
+
+  if (arrival >= departure) {
+    alert('Invalid dates: Arrival date must be before departure date.');
+    return;
+  }
   
   roomList.innerHTML = '';
 
@@ -70,6 +98,11 @@ function openModal() {
 
   modal.style.display = 'block'; 
   overlay.style.display = 'block'; 
+
+  document.getElementById('arrivalDate').value = '';
+  document.getElementById('departureDate').value = '';
+  document.getElementById('guests').value = '';
+
 }
 
 function closeModal() {
